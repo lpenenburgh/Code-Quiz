@@ -15,27 +15,47 @@
 
 <body>
     <!-- href? making another html for highscore page?-->
-    <a class="highscorelink" href=>View Highscores</a>
+    <!--<a class="highscorelink" href=>View Highscores</a>-->
 
     <!--Timer-->
     <div id="timer">Time: 0</div>
 
+    <main>
+        <!--start page content-->
+        <div class="start-page">
+            <h1 id="quizheader">Coding Quiz Challenge</h1>
+            <p id="directions">Try to answer the following code-related questions within the time limit. Keep in
+                mind that the incorrect answers will penelize your score/time by ten seconds! </p>
+            <button id="start-button" type="button" class="btn btn-outline-primary">Start Quiz</button>
+        </div>
 
-    <div class="container">
-        <h1 id="quizheader">Coding Quiz Challenge</h1>
-        <p id="directions">Try to answer the following code-related questions within the time limit. Keep in
-            mind that the incorrect answers will penelize your score/time by ten seconds! </p>
-        <button id="startbutton" type="button" class="btn btn-outline-primary">Start Quiz</button>
-    </div>
-    </div>
-    </div>
+        <div class="quiz-page">
+            <div id="question-asked"></div>
+            <div id="question-choices"></div>
+            <div id="question-response"></div>
+        </div>
+
+        <div class="results-page">
+            <h2>All Done!</h2>
+            <p>Your final score is <span class="final-score"></span>.</p>
+            <form>
+                <label for="initials">Enter Initials Here:</label>
+                <input type="text" id="initials" name="initials">
+                <button id="submit-button" type="button" class="btn btn-outline-primary">Submit</button>
+            </form>
+        </div>
+
+        <div class="highscore-page">
+            <h2>Highscores</h2>
+            <div class="highscores-listed"></div>
+            <button id="goback-button" type="button" class="btn btn-outline-primary">Go Back</button>
+            <button id="clear-highscores" type="button" class="btn btn-outline-primary">Clear Highscores</button>
+        </div>
+    </main>
 
 
 
-
-
-
-
+    <script src="./assets/script.js"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

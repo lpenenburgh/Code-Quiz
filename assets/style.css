@@ -1,4 +1,4 @@
-.container {
+main {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,3 +11,4 @@
     float:right;
     margin-right: 100px;
 }
+
