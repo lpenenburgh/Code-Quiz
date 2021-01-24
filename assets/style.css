@@ -12,3 +12,6 @@ main {
     margin-right: 100px;
 }
 
+.results-page {
+    display: none;
+} 
