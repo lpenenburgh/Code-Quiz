@@ -84,3 +84,39 @@ var quizQuestions = [
 ]
 
 
+//Start button waits for user to click it
+startButton.addEventListener("click", startQuiz);
+
+//Once clicked, the startPage content will disapear and timer will start
+function startQuiz(event) {
+    if (event.target.matches("BUTTON")) {
+        startPage.setAttribute("style", "display:none");
+        timerInterval = setInterval(tickDown, 1000);
+        //quiz questions will appear
+        showQuestions();
+
+    }
+}
+
+//coutdown function
+function tickDown() {
+    time--;
+    timerEl.textContent = "Time left: " + time;
+    //once the timer hits 0, the game ends
+    if (time <= 0) {
+        end();
+    }
+}
+
+
+//funtion to showQuestions 
+function showQuestions() {
+    var presentQuestion = quizQuestions[quizQuestionsIndex];
+    questionAsked.textContent = quizQuestions[quizQuestionsIndex].question;
+    //shows answer choices as buttons
+    choiceButtons.setAttribute("class", "btn-group-vertical");
+    //loop through questions one by one
+    for (var i = 0; i <quizQuestions.length - 1; i++) {
+        showAnswers(i);
+    }
+}
